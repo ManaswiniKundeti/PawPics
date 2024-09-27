@@ -19,10 +19,13 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // refresh data from network and insert into DB
+        dogViewModel.refreshDogs()
+
         setContent {
             Surface (
-                modifier = Modifier.fillMaxSize(),
-                color = Color.Blue
+                modifier = Modifier.fillMaxSize()
             ) {
                 DogListScreen(viewModel = dogViewModel)
             }
