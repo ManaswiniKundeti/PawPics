@@ -12,7 +12,7 @@ import com.example.pawpics.viewmodel.DogViewModel
 
 @Composable
 fun DogListScreen(viewModel: DogViewModel) {
-    val dogs = viewModel.allDogs.observeAsState().value ?: emptyList()
+    val dogs = viewModel.dogs.observeAsState().value ?: emptyList()
     LazyColumn (
         modifier = Modifier.fillMaxSize()
     ) {

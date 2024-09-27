@@ -72,9 +72,6 @@ dependencies {
     // Coil for image loading in Compose
     implementation("io.coil-kt:coil-compose:2.4.0")
 
-    // Material Design
-//    implementation("com.google.android.material:material:1.10.0")
-
     // Retrofit for networking
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -101,8 +98,9 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:2.45")
 
     // Hilt for ViewModels
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+//    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
