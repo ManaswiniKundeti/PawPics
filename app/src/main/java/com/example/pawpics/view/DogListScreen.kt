@@ -1,6 +1,8 @@
 package com.example.pawpics.view
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,6 +15,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
@@ -37,6 +41,7 @@ fun DogItem(dog: Dog) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp)
+            .border(BorderStroke(2.dp, SolidColor(Color.Red)))
     ) {
         dog.imageId?.let { imageId ->
             // Use Coil to load images asynchronously
